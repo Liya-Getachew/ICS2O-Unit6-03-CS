@@ -6,7 +6,8 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-class Program {
+class Program
+{
     public static async Task Main()
     {
         HttpClient client = new HttpClient();
@@ -20,16 +21,15 @@ class Program {
         JsonNode weatherNode = forecastNode!["weather"][0]!;
         // Console.WriteLine(weatherNode);
         JsonNode main = weatherNode!["main"]!;
-        // Console.WriteLine(main1Node);
+        // Console.WriteLine(mainNode);
         Console.WriteLine(main);
         Console.WriteLine("");
         // Console.WriteLine(forecastNode);
         JsonNode main1Node = forecastNode!["main"]!;
-        // Console.WriteLine(mainNode);
+        // Console.WriteLine(main1Node);
         JsonNode temp = main1Node!["temp"]!;
         JsonNode feel = main1Node!["feels_like"]!;
         Console.WriteLine(temp + " K, feels like " + feel + " K");
-        // Console.WriteLine(mainNode);
         JsonNode humidity = main1Node!["humidity"]!;
         Console.WriteLine("Humidity: " + humidity + "%");
     }
