@@ -1,3 +1,8 @@
+// Created by: liya getachew
+// Created on: Dec 16 2022
+//
+// This program accepts user input
+
 using System;
 using System.Reflection;
 using System.Collections.Generic;
@@ -10,6 +15,7 @@ class Program
 {
     public static async Task Main()
     {
+        // This function shows the current weather
         HttpClient client = new HttpClient();
         string response = await client.GetStringAsync("https://api.openweathermap.org/data/2.5/weather?lat=45.4211435&lon=-75.6900574&appid=fe1d80e1e103cff8c6afd190cad23fa5");
         // Console.WriteLine(response);
